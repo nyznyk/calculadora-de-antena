@@ -4,24 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Antena</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; background: #eef2f3; color: #333; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-        .app-container { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 360px; box-sizing: border-box; }
-        h2 { text-align: center; margin-top: 0; color: #0056b3; font-size: 1.4rem; }
-        label { font-weight: bold; font-size: 0.9rem; display: block; margin-top: 15px; }
-        input, select, button { width: 100%; padding: 12px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc; box-sizing: border-box; font-size: 1rem; }
-        input:focus, select:focus { border-color: #0056b3; outline: none; }
-        button { background: #0056b3; color: white; border: none; font-weight: bold; margin-top: 20px; cursor: pointer; transition: background 0.2s; }
-        button:hover { background: #004085; }
-        .resultados { margin-top: 20px; padding: 15px; background: #f8f9fa; border-left: 5px solid #0056b3; border-radius: 4px; display: none; }
-        .error { color: #dc3545; font-weight: bold; margin-top: 15px; text-align: center; }
+   <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background: #121212; /* Fundo da tela escuro */
+            color: #e0e0e0; /* Texto claro */
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+        }
+        .app-container { 
+            background: #1e1e1e; /* Cartão do app um pouco mais claro que o fundo */
+            padding: 25px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5); 
+            width: 100%; 
+            max-width: 360px; 
+            box-sizing: border-box; 
+        }
+        h2 { text-align: center; margin-top: 0; color: #3792ff; font-size: 1.4rem; }
+        label { font-weight: bold; font-size: 0.9rem; display: block; margin-top: 15px; color: #bbbbbb; }
+        
+        /* Estilo dos campos de digitação no modo escuro */
+        input, select, button { 
+            width: 100%; 
+            padding: 12px; 
+            margin-top: 5px; 
+            border-radius: 8px; 
+            border: 1px solid #333; 
+            background: #2d2d2d; 
+            color: white; 
+            box-sizing: border-box; 
+            font-size: 1rem; 
+        }
+        input:focus, select:focus { border-color: #3792ff; outline: none; }
+        
+        /* Botão azul de destaque */
+        button { background: #3792ff; color: white; border: none; font-weight: bold; margin-top: 20px; cursor: pointer; transition: background 0.2s; }
+        button:hover { background: #0066cc; }
+        
+        /* Caixa de resultados escura */
+        .resultados { margin-top: 20px; padding: 15px; background: #252525; border-left: 5px solid #3792ff; border-radius: 4px; display: none; }
+        .error { color: #ff6b6b; font-weight: bold; margin-top: 15px; text-align: center; }
     </style>
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
 
     <div class="app-container">
-        <h2>📻 Calc Antena</h2>
+        <h2>📡📻Calculadora de Antena</h2>
         
         <label for="freq">Frequência de operação (MHz):</label>
         <input type="number" id="freq" placeholder="Ex: 146.520" step="any">
@@ -29,7 +63,7 @@
         <label for="fracao">Fração da onda (em decimal):</label>
         <input type="number" id="fracao" placeholder="Ex: 0.25 para 1/4 ou 0.5 para 1/2" step="any">
 
-        <button onclick="calcularAntena()">Calcular Tamanho</button>
+        <button onclick="calcularAntena()">Calcular tamanho</button>
 
         <div id="error-msg" class="error"></div>
 
