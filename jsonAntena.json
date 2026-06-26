@@ -1,0 +1,15 @@
+{
+  "name": "Calculadora de Antena Radioamador",
+  "short_name": "Calc Antena",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#eef2f3",
+  "theme_color": "#0056b3",
+  "icons": [
+    {
+      "src": "icone.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
